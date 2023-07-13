@@ -1,0 +1,155 @@
+p {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+body {
+  background-color: #ddf0f0;
+  text-align: center;
+}
+
+.search-form {
+  background-color: #2c6a59;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0;
+  box-shadow: 0px 0px 10px 2px #2c4a59;
+}
+
+input {
+  font-size: 18px;
+  height: 34px;
+  background-color: #ddf0f0;
+  border: none;
+  width: 350px;
+  color: #2c4a59;
+}
+
+input:is(:hover, :focus) {
+  outline: none;
+}
+
+button {
+  height: 36px;
+  background-color: #ddf0f0;
+  color: #2c4a59;
+  border: none;
+  font-size: 14px;
+  box-shadow: 0px 0px 6px 1px #2c4a59;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+button:hover {
+  background-color: #2c4a59;
+  color: #ddf0f0;
+}
+
+.load-more {
+  align-self: center;
+  width: 150px;
+  margin: 20px 0;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.photo-card {
+  border-radius: 10px 10px 10px 10px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  width: 280px;
+  justify-content: center;
+  gap: 20px;
+  display: flex;
+  font-size: 14px;
+  color: #0b0b0b;
+  height: 50px;
+  background-color: rgba(6, 210, 37, 0.6);
+  border-radius: 0px 0px 10px 10px;
+}
+
+.info-item {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+}
+
+.photo-card:hover {
+  box-shadow: 0px 0px 10px 2px #2c4a59;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 3px solid #fff;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid;
+  border-color: #ff3d00 transparent;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
